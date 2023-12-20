@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+.web_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/bgimg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+audio {
+  display: none;
+}
+.logo {
+  mix-blend-mode: darken;
+}
+.seed_logo {
+  display: inline;
+  mix-blend-mode: darken;
+  padding-top: 2px;
+  padding-left: 3px;
+  height: 180px;
+  width: 195px;
+  padding-bottom: 5rem;
+}
+
+span {
+  display: block;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+.greetings {
+  padding-left: 15px;
+}
+.wishes {
+  color: #1076bf;
+}
+
+.occasion {
+  color: #ffb20b;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#hashtag {
+  color: rgb(14, 152, 14);
+  font-weight: bold;
+}
+
+.ashok_chakra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.spin_wheel path {
+  fill: rgb(255, 221, 0);
+}
+.wheel {
+  pointer-events: none;
+  height: 27.5rem;
+  width: 27.5rem;
+  position: fixed;
+  left: 39.6rem;
+  bottom: 120px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wheel {
+    animation: spinning_wheel infinite 20s linear;
+  }
+}
+
+@keyframes spinning_wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #ffdd00;
+  width: 100%;
+  /* padding: 1px; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer span {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.social_media {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#ln :hover {
+  border: solid 2px white !important;
+}
+#fb :hover {
+  border: solid 2px white !important;
+}
+#ig :hover {
+  border: solid 2px white !important;
+}
+
+.celebrate {
+  padding-top: 8px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffdd00;
+  color: white;
+  font-weight: 500;
+  border: solid 2px #ffdd00;
+}
+
+.celebrate :hover {
+  background-color: #fff !important;
+  color: #ffdd00;
+  border: solid 2px #ffdd00;
+  transition: ease 0.3s;
+}
+
+.celebrate :active {
+  background-color: #fff !important;
+  color: #ffdd00;
+  border: solid 2px #ffdd00;
+}
+
+.celebrate :focus {
+  background-color: #fff !important;
+  color: #ffdd00;
+  border: solid 2px #ffdd00;
+}
+
+.bannar {
+  max-width: 100%;
+  height: 40vh;
+  border: 5px solid #ffdd00;
+  border-radius: 15px;
+  -webkit-transform: translate(0px, 1000px);
+  transform: translate(0px, 1000px);
+}
+
+.bannar-come {
+  -webkit-animation: bannar_come linear 8s;
+  animation: bannar_come linear 8s;
+  transform: translate(0px, 0px);
+}
+@-webkit-keyframes bannar_come {
+  0% {
+    -webkit-transform: translate(0px, 1000px);
+  }
+  33% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-transform: scale(2);
+  }
+  66% {
+    -webkit-transform: translate(0px, 100px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .web_container {
+    background-image: url("images/ind.png");
+  }
+
+  .wheel {
+    pointer-events: none;
+    height: 29.5rem;
+    width: 29.5rem;
+    position: fixed;
+    left: 17.6rem;
+    bottom: 322px;
+  }
+}
+@media (max-width: 830px) {
+  .web_container {
+    background-image: url("images/ind.webp");
+    height: 95%;
+  }
+  .bannar {
+    max-width: 100%;
+    height: 15vh;
+  }
+  .wheel {
+    pointer-events: none;
+    height: 31.5rem;
+    width: 31.5rem;
+    position: fixed;
+    left: 10rem;
+    bottom: 326px;
+  }
+  .footer span {
+    padding: 9px;
+    font-size: 1.2rem;
+  }
+  .footer .social_media {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .web_container {
+    background-image: url("images/mobile_view.jpg");
+  }
+  .wheel {
+    display: none;
+  }
+
+  .bannar {
+    max-width: 100%;
+    height: 32vh;
+  }
+
+  .greetings .wishes {
+    font-size: 18px;
+  }
+
+  .occasion {
+    font-size: 20px;
+  }
+
+  #hashtag {
+    font-size: 20px;
+  }
+
+  .no {
+    display: none;
+  }
+  .footer .rights {
+    display: none;
+  }
+  .footer .social_media {
+    font-size: 1rem;
+    width: 100%;
+    background-color: #ffdd00;
+    text-align: right;
+  }
+}
